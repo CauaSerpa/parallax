@@ -175,7 +175,10 @@ section img#moon
 section img#ballon_behind,
 #mountains_behind,
 #moon,
-#stars
+#stars,
+#cloud_1,
+#cloud_2,
+#cloud_3
 {
     filter: blur(2px);
     -webkit-filter: blur(2px);
