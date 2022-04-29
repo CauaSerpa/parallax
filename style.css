@@ -246,9 +246,9 @@ section img#mountains_front
 .sec
 {
     position: relative;
+    height: 100vh;
     padding: 100px;
     background: #1A002A;
-    padding-bottom: 1000px;
 }
 .sec h2
 {
