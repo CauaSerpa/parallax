@@ -1,3 +1,49 @@
+//Mobile menu
+const showMenu = (toggleId, navId) =>{
+	const toggle = document.getElementById(toggleId),
+	nav = document.getElementById(navId)
+
+	if (toggle && nav){
+		toggle.addEventListener('click', ()=>{
+            var close = document.getElementById('nav-toggle');
+	        close.classList.toggle('close');
+
+            
+
+			nav.classList.toggle('show')
+		})
+	}
+}
+showMenu('nav-toggle','nav-menu')
+
+const navLink = document.querySelectorAll('.link')
+
+function linkAction(){
+	// Active link
+	navLink.forEach(n => n.classList.remove('active'))
+	this.classList.add('active')
+
+    var close = document.getElementById('nav-toggle');
+    close.classList.remove('close');
+
+	const navMenu = document.getElementById('nav-menu')
+	navMenu.classList.remove('show')
+}
+
+navLink.forEach(n => n.addEventListener('click', linkAction))
+
+//Add background
+const headerNav = document.querySelector(".l-header");
+
+window.addEventListener("scroll", () => {
+	if (window.pageYOffset > 100) {
+		headerNav.classList.add("background");
+	} else {
+		headerNav.classList.remove("background");
+	}
+})
+
+//Parallax Efect
 let moon = document.getElementById('moon');
 let mountains_behind = document.getElementById('mountains_behind');
 let text = document.getElementById('text');
